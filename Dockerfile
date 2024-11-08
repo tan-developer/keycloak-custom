@@ -5,6 +5,6 @@ WORKDIR /opt/keycloak
 ENV KEYCLOAK_ADMIN=admin
 ENV KEYCLOAK_ADMIN_PASSWORD=admin
 
-COPY /keycloak-theme.jar /opt/keycloak/providers/
+COPY /keycloak-theme/dist_keycloak/theme.jar /opt/keycloak/providers/
 
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start", "--http-enabled=true"]
